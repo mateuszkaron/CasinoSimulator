@@ -1,5 +1,5 @@
 # CasinoSimulator (in Progress....)
-Virtual Casino in CMD.
+Virtual Casino in C++ 23.
 
 ### Games:
 - Rulette
