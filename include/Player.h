@@ -21,6 +21,8 @@ public:
 	bool canPlay() const;
 
 	void showPlayer() const;
+
+	static Player guest();
 };
 
 #endif

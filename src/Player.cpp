@@ -1,10 +1,13 @@
 #include <iostream>
-#include "Player.h"
+#include "../include/Player.h"
+#include <random>
 
-Player::Player(std::string name, double startMoney)
+using namespace std;
+
+Player::Player(string name, double startMoney)
 	: name(name), money(startMoney) {}
 
-std::string Player::getName() const {
+string Player::getName() const {
 	return name;
 }
 
@@ -29,5 +32,15 @@ bool Player::canPlay() const {
 }
 
 void Player::showPlayer() const {
-	std::cout << "Player: " << name << ", money: " << money << std::endl;
+	cout << "Player: " << name << ", money: " << money << endl;
+}
+
+Player Player::guest() {
+
+	random_device rand;
+	mt19937 gen(rand()); // Standard mersenne_twister_engine
+	uniform_int_distribution<int> dist(100, 1000);
+	int randomMoney = dist(gen);
+
+	return Player("Guest", randomMoney);
 }
