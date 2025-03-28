@@ -1,10 +1,12 @@
-﻿#include <iostream>
+
 #include "include/Player.h"
 #include <conio.h>
 #include <dos.h>
 #include <windows.h>
 #include <time.h>
 #include <fstream>
+#include "signIn.h"
+
 
 using namespace std;
 
@@ -38,10 +40,6 @@ void gamesMenu() {
 
 }
 
-void signIn() {
-	cout << "Enter your name: ";
-}
-
 void leaderboard() {
 	system("cls");
 
@@ -52,7 +50,6 @@ void leaderboard() {
 		cout << linia << endl;
 	}
 	_getche();
-
 
 }
 
